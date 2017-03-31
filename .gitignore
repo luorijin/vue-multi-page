@@ -1,0 +1,18 @@
+# OSX files
+.DS_Store
+._.DS_Store
+#ingore image
+._*.png
+._*.jpg
+._*.ico
+#webstorm configuration files
+.idea/
+.xml
+#ignore map file
+*.map
+#ignore javascript file
+._*.js
+#ignore html file
+._*.html
+node_modules/
+.vscode
