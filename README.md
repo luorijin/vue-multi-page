@@ -9,7 +9,7 @@
 首先 
 npm i vue-cli -g
 vue init webpack initrep
-cd initrep&&npmi
+cd initrep&&npm i or cd initrep&&cnpm i or cd initrep&&yarn
 ```
 ```
 首先我们先打开build里的utils.js
