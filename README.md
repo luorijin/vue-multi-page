@@ -75,7 +75,7 @@ for(var page in pages) {
   module.exports.plugins.push(new HtmlWebpackPlugin(conf))
 }
 现在就可以npm run dev了
-可以通过http://127.0.0.1/模块名.html(是module内的模块文件夹名字)
+可以通过http://127.0.0.1:8080/模块名.html(是module内的模块文件夹名字)
 如果觉得这样访问比较麻烦 请打开源码的dev-server 54行进行查看如何修改
 ###End
 ```
