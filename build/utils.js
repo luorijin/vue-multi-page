@@ -1,6 +1,7 @@
 var path = require('path')
 var config = require('../config')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+// glob全局 中间件 用于查找文件
 var glob = require('glob')
 exports.assetsPath = function (_path) {
   var assetsSubDirectory = process.env.NODE_ENV === 'production'
@@ -69,6 +70,7 @@ exports.styleLoaders = function (options) {
   }
   return output
 }
+//查到 module下的文件
 exports.getEntries = function (globPath) {
   var entries = {}
   glob.sync(globPath).forEach(function (entry) {

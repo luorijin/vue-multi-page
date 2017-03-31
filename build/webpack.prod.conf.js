@@ -108,6 +108,8 @@ if (config.build.bundleAnalyzerReport) {
 }
 
 module.exports = webpackConfig
+// 告诉打包文件  把东西APP.vue和Main.js内的文件 打包到哪里
+// 还有增加了合并雪碧图
 var pages = utils.getEntries('./src/module/**/*.html')
 for(var page in pages) {
   // 配置生成的html文件，定义路径等

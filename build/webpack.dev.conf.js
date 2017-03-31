@@ -29,6 +29,7 @@ module.exports = merge(baseWebpackConfig, {
     new FriendlyErrorsPlugin()
   ]
 })
+// HtmlWebpackPlugin  给每个模块下的html注册  意思就是把APP.vue里的东西塞到这个文件内
 var pages = utils.getEntries('./src/module/**/*.html')
 for(var page in pages) {
   var conf = {

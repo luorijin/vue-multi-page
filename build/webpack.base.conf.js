@@ -8,6 +8,8 @@ function resolve (dir) {
 }
 
 module.exports = {
+  // 用自定义方法修改主入口文件(module下的各个模块内只能有一个主入口文件)
+  // utils.getEntries('./src/module/**/mian.js')  如果怕出错 请改为这个
   entry: utils.getEntries('./src/module/**/*.js'),
   output: {
     path: config.build.assetsRoot,

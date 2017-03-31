@@ -50,6 +50,29 @@ Object.keys(proxyTable).forEach(function (context) {
   }
   app.use(proxyMiddleware(options.filter || context, options))
 })
+// 由于是多页应用 没有了主路由
+// 访问页面还需要增加.html后缀
+// 修改connect-history-api-fallback 可以解决这一问题
+// to 里面的html名字是模块的名字,不是你模块内的名字
+// 为了达到你的前端路由和你修改的history路由一样  请将各个模块里的router里加一个配置
+/*
+如]
+export default new VueRouter({
+  mode: 'history',
+  base: '/pc',
+  routes
+})
+如果模块过多的话,请使用utils内的方法*/
+//var pages = utils.getEntries('./src/module/**/*.html')
+/*
+for(page in page){
+  const rewrites = {
+  rewrites: [
+      { from: '/'+page'/', to: '/'+page+'.html' },
+    ]
+}
+}
+*/ 
 const root = __dirname + '/src'
 app.use(express.static(root));
 const rewrites = {
