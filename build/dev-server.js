@@ -63,14 +63,12 @@ export default new VueRouter({
   routes
 })
 如果模块过多的话,请使用utils内的方法*/
+/*const rewrites = {
+  rewrites: []
+  }*/
 //var pages = utils.getEntries('./src/module/**/*.html')
-/*
-for(page in page){
-  const rewrites = {
-  rewrites: [
-      { from: '/'+page'/', to: '/'+page+'.html' },
-    ]
-}
+/*for(page in pages){
+  rewrites.rewrites.push(  { from: '/'+page+'/', to: '/'+page+'.html' },  { from: '/'+page+'.html', to: '/'+page+'/' })
 }
 */ 
 const root = __dirname + '/src'
